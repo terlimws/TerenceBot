@@ -56,6 +56,8 @@ var intents = new builder.IntentDialog({ recognizers: [recognizer] })
     session.send(generalReplies[rand]);
 })
 
+
+/*
 .matches('BusTiming.NextBus', (session, args) => {
     var busNum = builder.EntityRecognizer.findEntity(args.entities, 'BusServiceNum');
     var busStopNum = builder.EntityRecognizer.findEntity(args.entities, 'BusStopNum');
@@ -163,6 +165,8 @@ uri:busUrl+"BusStopID="+busStopNum+"&ServiceNo="+busNum}, function(error, respon
     console.log(body);
         });
 })
+
+*/
 
 .onDefault((session) => {
     session.send('Sorry, I did not understand \'%s\'.', session.message.text);
